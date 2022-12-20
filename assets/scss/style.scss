@@ -1,0 +1,504 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+.container-header{
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid red;
+}
+.container{
+    max-width: 1440px;
+    margin: auto;
+    border: 1px solid red;
+}
+
+$background-color:#000000;
+$letter-color: #FFFFFF;
+$header-color: #181818;
+
+@mixin font-size {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: $letter-color;
+}
+@mixin display-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin display-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+}
+
+// start header
+header{
+    background-color: $header-color;
+    .header{
+        width: 100%;
+        height: 90px;
+        background-color: $header-color;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        svg{
+            width: 128px;
+            margin-right: 200px;
+        }
+        nav{          
+            a{
+                @include font-size;
+                font-size: 15px;
+                line-height: 20px;
+                margin-left: 56px;
+            }
+        }
+        button{
+            letter-spacing: 0.4px;
+            width: 155px;
+            height: 42px;
+            border-radius: 14px;
+            background-color: $letter-color;
+        }
+    }
+}
+// end header
+
+// start main
+main{
+// first section
+    .first-section{ 
+        width: 100%;
+        height: 711px;
+        background-image: url(../image/section1.jfif);
+        background-size: cover;
+        margin-bottom: 41px;
+        // background-color: rgba(0, 0, 0, 0.992);
+        // background: top rgba(0, 0, 0, 0.2), url(../image/section1.jfif);
+     .container{
+        height: 100%;
+     }
+     .paragraph-icon{
+        height: 100%;
+        justify-content: flex-end;
+        text-align: center;
+        @include display-flex;
+        @include font-size;
+         .paragraph{
+            span{
+                text-transform: uppercase;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 2px;            
+            }
+            h2{
+                font-size: 54px;
+                line-height: 59.4px;
+                margin-bottom: 18px;
+            }
+            p{
+                width: 580px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+         }
+         .icon{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            @include font-size; 
+            span{
+                margin-right: 16px;
+            }          
+         }
+     }
+    }
+// second section
+.second-section{
+    background-color: $background-color;
+    .title{
+        margin-top: 113px;
+        @include display-flex;
+        margin-bottom: 42px;
+        h2{
+            font-size: 40px;
+            line-height: 42px;
+            @include font-size;
+        }
+        p{
+            font-size: 23px;
+            line-height: 30px;
+            color: #C0C0C0;
+            font-weight: 400;
+            font-family: 'Poppins', sans-serif;
+        }
+    }
+    .all-cards{
+        @include display-wrap;
+        margin-bottom: 100px;
+        .card{
+            width: 576px;
+            height: 600px;
+            margin: 10px;
+            position: relative;
+
+            img{
+                width: 576px;
+                height: 600px;
+                overflow: hidden;
+            }
+            .detail{
+                position: absolute;
+                bottom: 20px;
+                @include font-size;
+                padding: 0px 25px 30px 30px;
+                h3{
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-bottom: 20px;
+                }
+                .fa-circle{
+                    color: $background-color;
+                    position: absolute;
+                    margin-top: 8px;
+                    margin-left: 7px;
+                    font-size: 25px;
+                }
+                button{
+                    width: 143px;
+                    height: 42px;
+                    border-radius: 14px;
+                    font-weight: 400;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 15px;
+                    letter-spacing: 0.4px;
+                    line-height: 20px;
+                    color: $background-color;
+                    text-indent: 10px;
+                    
+                }
+            }
+        }
+
+
+    }
+}
+// third section
+.third-section{
+    background-image: url(../image/third-section.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 41px;
+    height: 900px;
+    .container{
+        height: 100%;
+     }
+     .paragraph-icon{
+        height: 100%;
+        
+        @include display-flex;
+        @include font-size;
+         .paragraph{
+            display: flex;
+            flex-direction: column;
+            
+            h2{
+                @include font-size;
+                font-size: 14px;
+                line-height: 20px;
+                text-transform: uppercase;
+            }
+            p{
+                @include font-size;
+                width: 298px;
+                font-size: 14px;
+                line-height: 20px;
+                color: #C0C0C0;
+            }
+         }
+         .icon{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            @include font-size; 
+            span{
+                margin-right: 16px;
+            }          
+         }
+    }
+
+}
+// forth section
+.forth-section{
+    width: 100%;
+    height: 544px;
+    background-color: $background-color;
+    border: 1px solid green;
+    .section4{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .left-side{
+            width: 720px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                padding: 0 106px 0 100px;
+                h4{
+                    @include font-size;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 2px;
+                    color: #C0C0C0;
+                    text-transform: uppercase;
+                }
+                h3{
+                    font-size: 14px;
+                    line-height: 32px;
+                    @include font-size;
+                }
+                p{
+                    @include font-size;
+                    font-size: 14px;
+                    line-height: 20px;
+                    
+                }
+                .fa-circle{
+                    color: $background-color;
+                    position: absolute;
+                    margin-top: 8px;
+                    margin-left: 7px;
+                    font-size: 25px;
+                }
+                button{
+                    width: 152px;
+                    height: 42px;
+                    border-radius: 14px;
+                    font-weight: 400;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 16px;
+                    letter-spacing: 0.4px;
+                    line-height: 20px;
+                    color: $background-color;
+                    text-indent: 10px;
+                }
+            }
+            .right-side{
+                img{
+                    width: 720px;
+                    height: 540px;
+                    overflow: hidden;
+                    
+                }
+                .icon{
+                   
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: end;
+                    @include font-size; 
+                    span{
+                        margin-right: 16px;
+                    }          
+                 }
+            }
+
+    }
+       
+
+    
+
+
+}
+
+// fifth section
+.fifth-section{
+    background-image: url(../image/section5.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    .container{
+        height: 100%;
+     }
+     .paragraph-icon{
+        height: 100%;
+        
+        @include display-flex;
+        @include font-size;
+         .paragraph{
+            display: flex;
+            flex-direction: column;
+            
+            h2{
+                @include font-size;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            p{
+                @include font-size;
+                width: 273px;
+                font-size: 14px;
+                line-height: 20px;
+                color: #C0C0C0;
+            }
+         }
+         .icon{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            @include font-size; 
+            span{
+                margin-right: 16px;
+            }          
+         }
+    }
+}
+
+// sixth section
+.sixth-section{
+    background-color: $background-color;
+    height: 500px;
+
+    .section6{
+        .title{
+            text-align: center;
+            @include display-flex;
+            margin-bottom: 82px;
+            margin-top: 113px;
+            h2{
+                @include font-size;
+                font-size: 40px;
+                line-height: 42px;
+            }
+            h5{
+                @include font-size;
+                font-size: 24px;
+                line-height: 30px;
+                
+            }
+        }
+        svg{
+            margin-right: 109px;
+            
+
+        }
+    }
+
+
+
+}
+
+// seventh section
+.seventh-section{
+    background-image: url(../image/section7.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    .container{
+        height: 100%;
+     }
+     .paragraph-icon{
+        height: 100%;
+        
+        @include display-flex;
+        @include font-size;
+         .paragraph{
+            display: flex;
+            flex-direction: column;
+            
+            h2{
+                @include font-size;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            p{
+                @include font-size;
+                width: 273px;
+                font-size: 14px;
+                line-height: 20px;
+                color: #C0C0C0;
+            }
+         }
+         .icon{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            @include font-size; 
+            span{
+                margin-right: 16px;
+            }          
+         }
+    }
+}
+
+// eighth section
+.eighth-section{
+    background-color: $background-color;
+    height: 414px;
+
+
+    .section8{
+        .title{
+            text-align: center;
+            h2{
+                @include font-size;
+                font-size: 40px;
+                line-height: 42px;
+            }
+            h5{
+                @include font-size;
+                font-size: 24px;
+                line-height: 30px;
+            }
+        }
+    }
+
+
+    .button{
+        .fa-circle{
+            color: $background-color;
+            position: absolute;
+            margin-top: 8px;
+            margin-left: 7px;
+            font-size: 25px;
+        }
+        button{
+            width: 154px;
+            height: 42px;
+            border-radius: 14px;
+            font-weight: 400;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            letter-spacing: 0.4px;
+            line-height: 20px;
+            color: $background-color;
+            text-indent: 10px;
+        }
+    }
+}
+}
+
+// end main
+
+// start footer
