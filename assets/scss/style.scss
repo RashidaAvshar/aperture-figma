@@ -9,12 +9,12 @@
 .container-header{
     max-width: 1200px;
     margin: auto;
-    border: 1px solid red;
+    // border: 1px solid red;
 }
 .container{
     max-width: 1440px;
     margin: auto;
-    border: 1px solid red;
+    // border: 1px solid red;
 }
 
 $background-color:#000000;
@@ -39,6 +39,7 @@ $header-color: #181818;
         justify-content: center;
         align-items: center;
 }
+
 
 // start header
 header{
@@ -79,12 +80,19 @@ main{
 // first section
     .first-section{ 
         width: 100%;
-        height: 711px;
-        background-image: url(../image/section1.jfif);
-        background-size: cover;
-        margin-bottom: 41px;
-        // background-color: rgba(0, 0, 0, 0.992);
-        // background: top rgba(0, 0, 0, 0.2), url(../image/section1.jfif);
+            height: 787px;
+            background-color: $background-color ;
+        .section1{
+            width: 100%;
+            height: 711px;
+            // background-image: url(../image/section1.jfif);
+            // background: rgb(2,0,36);
+            background: rgb(11,84,98);
+    background: linear-gradient(176deg, rgba(11,84,98,0.5553571770505077) 0%, rgba(1,1,19,0.9139005944174545) 58%), url("../image/section1.jfif");
+            background-size: cover;
+            // background-color: rgba(0, 0, 0, 0.992);
+            // background: top rgba(0, 0, 0, 0.2), url(../image/section1.jfif);
+        }
      .container{
         height: 100%;
      }
@@ -113,10 +121,9 @@ main{
             }
          }
          .icon{
-            display: flex;
-            flex-direction: row;
-            justify-content: end;
+            align-self: flex-end;
             @include font-size; 
+            // margin-bottom: 40px;
             span{
                 margin-right: 16px;
             }          
@@ -126,8 +133,9 @@ main{
 // second section
 .second-section{
     background-color: $background-color;
+    height: 1558px;
     .title{
-        margin-top: 113px;
+        // margin-top: 113px;
         @include display-flex;
         margin-bottom: 42px;
         h2{
@@ -145,7 +153,7 @@ main{
     }
     .all-cards{
         @include display-wrap;
-        margin-bottom: 100px;
+        
         .card{
             width: 576px;
             height: 600px;
@@ -203,21 +211,22 @@ main{
 .third-section{
     background-image: url(../image/third-section.jfif);
     background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 41px;
+    background-size: cover;    
     height: 900px;
+    width: 100%;
     .container{
         height: 100%;
+        width: 100%;
      }
      .paragraph-icon{
         height: 100%;
-        
-        @include display-flex;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
         @include font-size;
          .paragraph{
-            display: flex;
-            flex-direction: column;
-            
             h2{
                 @include font-size;
                 font-size: 14px;
@@ -230,33 +239,33 @@ main{
                 font-size: 14px;
                 line-height: 20px;
                 color: #C0C0C0;
+                margin-bottom: 350px;
             }
          }
-         .icon{
-            display: flex;
-            flex-direction: row;
-            justify-content: end;
+         .icon{           
             @include font-size; 
+            margin-bottom: 40px;
             span{
                 margin-right: 16px;
             }          
          }
     }
-
 }
 // forth section
 .forth-section{
     width: 100%;
     height: 544px;
     background-color: $background-color;
-    border: 1px solid green;
+    // border: 1px solid green;
     .section4{
         width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: row;
+        justify-content: center;
         align-items: center;
         .left-side{
-            width: 720px;
+            width: 50%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -302,17 +311,15 @@ main{
                 }
             }
             .right-side{
-                img{
-                    width: 720px;
-                    height: 540px;
-                    overflow: hidden;
-                    
-                }
+                
+                width: 50%;
+                height: 100%;
+                background-image: url(../image/section4.jfif);
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
                 .icon{
-                   
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: end;
+                    margin-bottom: 40px;
                     @include font-size; 
                     span{
                         margin-right: 16px;
@@ -334,17 +341,24 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
+    width: 100%;
     .container{
         height: 100%;
+        width: 100%;
      }
-     .paragraph-icon{
+     .section5{
+        width: 100%;
         height: 100%;
-        
-        @include display-flex;
-        @include font-size;
-         .paragraph{
-            display: flex;
-            flex-direction: column;
+     }
+     .paragraph-icon{        
+     height: 100%;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+    justify-content: flex-end;
+     align-items: flex-end;
+     @include font-size;
+         .paragraph{          
             
             h2{
                 @include font-size;
@@ -359,12 +373,11 @@ main{
                 font-size: 14px;
                 line-height: 20px;
                 color: #C0C0C0;
+                margin-bottom: 200px;
             }
          }
          .icon{
-            display: flex;
-            flex-direction: row;
-            justify-content: end;
+            margin-bottom: 40px;
             @include font-size; 
             span{
                 margin-right: 16px;
@@ -379,6 +392,10 @@ main{
     height: 500px;
 
     .section6{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         .title{
             text-align: center;
             @include display-flex;
@@ -393,13 +410,10 @@ main{
                 @include font-size;
                 font-size: 24px;
                 line-height: 30px;
-                
             }
         }
         svg{
             margin-right: 109px;
-            
-
         }
     }
 
@@ -413,18 +427,21 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
-    .container{
+    width: 100%;
+    .section7{
+        width: 100%;
         height: 100%;
-     }
+    }
      .paragraph-icon{
         height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
         
-        @include display-flex;
         @include font-size;
          .paragraph{
-            display: flex;
-            flex-direction: column;
-            
             h2{
                 @include font-size;
                 font-size: 14px;
@@ -438,15 +455,14 @@ main{
                 font-size: 14px;
                 line-height: 20px;
                 color: #C0C0C0;
+                margin-bottom: 200px;
             }
          }
          .icon{
-            display: flex;
-            flex-direction: row;
-            justify-content: end;
+            margin-bottom: 40px;
             @include font-size; 
             span{
-                margin-right: 16px;
+            margin-right: 16px;
             }          
          }
     }
@@ -456,25 +472,33 @@ main{
 .eighth-section{
     background-color: $background-color;
     height: 414px;
-
-
+.container{
+    width: 100%;
+    height: 100%;
+}
     .section8{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         .title{
             text-align: center;
             h2{
                 @include font-size;
                 font-size: 40px;
                 line-height: 42px;
+                margin-bottom: 15px;
             }
             h5{
                 @include font-size;
                 font-size: 24px;
                 line-height: 30px;
+                margin-bottom: 22px;
             }
         }
     }
-
-
     .button{
         .fa-circle{
             color: $background-color;
@@ -487,8 +511,7 @@ main{
             width: 154px;
             height: 42px;
             border-radius: 14px;
-            font-weight: 400;
-            font-family: 'Poppins', sans-serif;
+            @include font-size;
             font-size: 16px;
             letter-spacing: 0.4px;
             line-height: 20px;
@@ -502,3 +525,149 @@ main{
 // end main
 
 // start footer
+footer{
+    background-color: $background-color;
+    width: 100%;
+    height: 100%;
+    .container-header{
+    max-width: 1200px;
+    margin: auto;
+    // border: 1px solid red;
+}
+// section footer first
+.section-logo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    
+    figure{
+        margin-top: 100px;
+        p{
+            @include font-size;
+            font-size: 13px;
+            line-height: 20px;
+            color: #C0C0C0;
+            margin-top: 20px;
+            margin-right: 270px;
+            
+        }
+    }
+}
+.business{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    h4{
+        @include font-size;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 2px;
+        color: $letter-color;
+        margin-right: 100px;
+    }
+    a{
+        @include font-size;
+        font-size: 14px;
+        line-height: 20px;
+        color: $letter-color;
+        margin-top: 10px;
+    }
+}
+.page{
+    // width: 100%;
+    // height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 36px;
+    margin-top: 100px;
+    h5{
+        @include font-size;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 2px;
+        color: $letter-color;
+    }
+    a{
+        @include font-size;
+        font-size: 13px;
+        line-height: 20px;
+        color: $letter-color;
+        margin-top: 10px;
+    }
+}
+// section footer second
+.subscribe{
+    width: 100%;
+    height: 132px;
+    display: flex;
+    flex-direction: column;
+    span{
+        width: 1160px;
+        height: 2px;
+        border: 1px solid $letter-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .check{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        .newsletter{
+            h5{
+                @include font-size;
+                color: $letter-color;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 2px;    
+                margin-bottom: 20px;
+                margin-top: 36px;
+            }
+            p{
+                @include font-size;
+                font-size: 13px;
+                line-height: 20px;
+                color: #C0C0C0;
+                margin-bottom: 36px;
+                margin-right: 497px;
+            }
+        }
+        input{
+            width: 458px;
+            height: 52px;
+            border-radius: 12px;
+            border-color: #C0C0C0;
+            background-color: $letter-color;
+            padding: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+    }
+}
+// section footer third
+.section-icon{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 56px;
+    p{
+        @include font-size;
+        font-size: 14px;
+        line-height: 20px;
+        color: #C0C0C0;
+        margin-right: 630px;
+    }
+    .icon{
+        display: flex;
+        flex-direction: row;
+        color: #C0C0C0;
+        margin-bottom: 104px;
+        i{
+            margin-right: 25px;
+            height: 24px;
+            font-size: 30px;
+        }
+    }
+}
+}
